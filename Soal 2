@@ -1,0 +1,21 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parameter
+A = 0.05  # Amplitudo dalam meter
+T = 10    # Periode dalam detik
+f = 1 / T  # Frekuensi dalam Hz
+
+# Waktu dari 0 hingga 50 detik
+t = np.linspace(0, 50, 1000)
+
+# Persamaan posisi x(t)
+x_t = A * np.cos(2 * np.pi * f * t)
+
+# Plot grafik posisi terhadap waktu
+plt.plot(t, x_t)
+plt.title('Gerak Harmonis Sederhana')
+plt.xlabel('Waktu (detik)')
+plt.ylabel('Posisi (meter)')
+plt.grid(True)
+plt.show()
